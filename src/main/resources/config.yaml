@@ -1,0 +1,6 @@
+weather:
+  appId: "9f2cfe26f25fdce5533534b910129be3"
+  host: "api.openweathermap.org"
+  port: "80"
+  client_id: "1"
+  client_secret: "1"

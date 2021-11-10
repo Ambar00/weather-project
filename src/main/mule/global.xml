@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cb8e5831-042b-4116-aa70-dbf3744448b9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="c048bcf4-6084-4359-ab1d-4eb1c91d81e4" >
+		<http:request-connection host="${weather.host}" port="${weather.port}" />
+	</http:request-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="f2968056-bbe3-47ac-ad46-fe27dafb1212" file="config.yaml" />
+	<http:listener-config name="HTTP_Listener_config_air" doc:name="HTTP Listener config" doc:id="3e494dfd-e34d-407c-9851-9bb4668a2b77" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+</mule>
